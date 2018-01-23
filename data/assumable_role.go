@@ -16,6 +16,7 @@ type AssumableRole struct {
 
 // SetARNFromParts will build and set an ARN from the role name and account number
 func (r *AssumableRole) SetARNFromParts(roleName, accountNum string) {
+	//TODO: should probably validate the parts here at some point
 	r.RoleARN = fmt.Sprintf("arn:aws:iam::%s:role/%s", accountNum, roleName)
 }
 
